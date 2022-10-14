@@ -1,0 +1,20 @@
+title: Bilder-Übersicht
+fields:
+  -
+    handle: images
+    field:
+      collapse: false
+      previews: true
+      sets:
+        image:
+          display: Bild
+          fields:
+            -
+              import: image
+      display: Bilder
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

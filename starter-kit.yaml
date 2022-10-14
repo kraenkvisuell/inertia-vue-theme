@@ -1,0 +1,24 @@
+export_paths:
+  - config/filesystems.php
+  - config/statamic/assets.php
+  - content
+  - package.json
+  - public/css
+  - public/img
+  - public/js
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/css
+  - resources/js
+  - resources/users/roles.yaml
+  - resources/views
+  - routes/web.php
+  - storage/app/public
+  - tailwind.config.js
+  - webpack.mix.js
+  - webpack.ssr.mix.js
+dependencies:
+  inertiajs/inertia-laravel: ^0.6.3
+  kraenkvisuell/statamic-helpers: ^0.8
+  laravel/horizon: ^5.10
+  spatie/laravel-ray: ^1.31

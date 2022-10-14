@@ -1,0 +1,9 @@
+{
+    "name": "my-vendor-name/inertia-vue-theme",
+    "extra": {
+        "statamic": {
+            "name": "Inertia Vue Theme",
+            "description": "Inertia Vue Theme starter kit"
+        }
+    }
+}
