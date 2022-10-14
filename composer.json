@@ -1,5 +1,5 @@
 {
-    "name": "my-vendor-name/inertia-vue-theme",
+    "name": "kraenkvisuell/inertia-vue-theme",
     "extra": {
         "statamic": {
             "name": "Inertia Vue Theme",
