@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Head :title="entry.title" />
+        <Head :title="$page.props.browserTitle" />
         <h1 class="text-2xl">Hallo Welt!</h1>
 
         <ContentSets :sets="entry.content" />

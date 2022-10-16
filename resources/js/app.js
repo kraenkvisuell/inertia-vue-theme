@@ -10,9 +10,9 @@ InertiaProgress.init({
 createInertiaApp({
     title: (title) => `${title}`,
     resolve: name => {
-        const page = require(`./Blueprints/${name}`).default
-        page.layout = page.layout || Layout
-        return page
+        const page = require(`./Blueprints/${name}`).default;
+        page.layout = page.layout || Layout;
+        return page;
     },
     
     setup({ el, App, props, plugin }) {

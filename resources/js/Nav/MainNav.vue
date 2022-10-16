@@ -2,7 +2,7 @@
     <nav class="bg-slate-200 p-2">
         <ul class="flex gap-4 flex-wrap">
             <li
-                v-for="item in this.$page.props.mainNav"
+                v-for="item in $page.props.shared.mainNav"
             >
                 <Link 
                     :href="item.url" 
@@ -22,9 +22,6 @@
 import { Link } from "@inertiajs/inertia-vue3";
 
 export default {
-    components: { Link },
-    mounted() {
-        console.log(this.$page.props.mainNav);
-    }
+    components: { Link }
 };
 </script>

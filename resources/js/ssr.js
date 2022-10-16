@@ -8,13 +8,13 @@ createServer((page) => createInertiaApp({
     page,
     render: renderToString,
     resolve: name => {
-        const page = require(`./Blueprints/${name}`).default
-        page.layout = page.layout || Layout
-        return page
+        const page = require(`./Blueprints/${name}`).default;
+        page.layout = page.layout || Layout;
+        return page;
     },
     setup({ app, props, plugin }) {
       return createSSRApp({
         render: () => h(app, props),
-      }).use(plugin)
+      }).use(plugin);
     },
 }));

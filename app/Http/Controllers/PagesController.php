@@ -16,9 +16,11 @@ class PagesController extends Controller
             return abort(404);
         }
 
+        $browserTitle = $entry->browser_title ?: 'foobar';
+
         return Inertia::render(
             Str::studly($entry['blueprint']['handle']),
-            compact('entry')
+            compact('entry', 'browserTitle'),
         );
     }
 }
