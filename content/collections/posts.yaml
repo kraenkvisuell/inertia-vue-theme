@@ -1,0 +1,18 @@
+title: Posts
+sites:
+  - default
+  - en
+propagate: false
+template: default
+layout: layout
+revisions: false
+route: '/news/{slug}'
+sort_dir: asc
+default_status: draft
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Post
+    url: '{permalink}'

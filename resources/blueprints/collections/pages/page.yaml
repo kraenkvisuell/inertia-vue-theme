@@ -27,3 +27,8 @@ sections:
         field:
           type: slug
           localizable: true
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo

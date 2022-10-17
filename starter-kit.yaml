@@ -2,7 +2,9 @@ export_paths:
   - app/Http/Controllers/PagesController.php
   - app/Http/Middleware/HandleInertiaRequests.php
   - app/Http/Kernel.php
+  - config/app.php
   - config/statamic/editions.php
+  - config/statamic/sites.php
   - content
   - package.json
   - public/css

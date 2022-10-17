@@ -21,8 +21,8 @@
             <figcaption class="flex justify-between text-sm">
                 <span v-text="set.caption" />
                 <span v-if="set.credits" v-text="'© ' + set.credits" />
-            </figcaption>   
-        </figure>       
+            </figcaption>
+        </figure>
     </div>
 </template>
 

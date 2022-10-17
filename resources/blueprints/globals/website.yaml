@@ -1,16 +1,17 @@
 sections:
-  main:
-    display: Main
+  seo:
+    display: SEO
     fields:
       -
-        handle: browser_title
+        handle: seo_description
         field:
-          input_type: text
-          antlers: false
-          display: Browser-Titel
-          type: text
-          icon: text
+          display: Default-Einstellungen
+          type: section
+          icon: section
+          instructions: 'Die Default-SEO-Einstellungen für die Website - können pro Seite, Post etc. individuell eingestellt werden.'
           listable: hidden
           instructions_position: above
           visibility: visible
           always_save: false
+      -
+        import: seo
