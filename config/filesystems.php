@@ -42,27 +42,15 @@ return [
             'visibility' => 'public',
         ],
 
-        's3' => [
-            'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'endpoint' => env('AWS_ENDPOINT'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'visibility' => 'public',
-            'root' => env('APP_SLUG', 'default-website'),
-
-            'cache' => [
-                'store' => 'redis',
-                'expire' => 300,
-                'prefix' => 'assets',
-            ],
-        ],
-
         'assets' => [
-            'driver' => 'local',
-            'root' => public_path('assets'),
-            'url' => '/assets',
+            'driver' => 's3',
+            'key' => env('DO_SPACES_KEY'),
+            'secret' => env('DO_SPACES_SECRET'),
+            'endpoint' => env('DO_SPACES_ENDPOINT'),
+            'region' => env('DO_SPACES_REGION'),
+            'bucket' => env('DO_SPACES_BUCKET'),
+            'root' => env('DO_SPACES_ROOT'),
+            'cdn' => env('DO_SPACES_CDN'),
             'visibility' => 'public',
         ],
 

@@ -3,3 +3,69 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+
+@font-face {
+    font-family: "Geometris";
+    font-weight: 300;
+    src: url('/css/webfonts/GeometrisLight/font.woff2') format('woff2'), url('/css/webfonts/GeometrisLight/font.woff') format('woff');
+}
+@font-face {
+    font-family: "Geometris";
+    font-weight: 700;
+    src: url('/css/webfonts/GeometrisBold/font.woff2') format('woff2'), url('/css/webfonts/GeometrisBold/font.woff') format('woff');
+}
+@font-face {
+    font-family: "Geometris";
+    font-weight: 500;
+    src: url('/css/webfonts/GeometrisMedium/font.woff2') format('woff2'), url('/css/webfonts/GeometrisMedium/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Barlow";
+    font-weight: 300;
+    font-style: normal;
+    src: url('/css/webfonts/Barlow-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Barlow";
+    font-weight: 300;
+    font-style: italic;
+    src: url('/css/webfonts/Barlow-LightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Barlow";
+    font-weight: 400;
+    font-style: normal;
+    src: url('/css/webfonts/Barlow-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Barlow";
+    font-weight: 400;
+    font-style: italic;
+    src: url('/css/webfonts/Barlow-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Barlow";
+    font-weight: 600;
+    font-style: normal;
+    src: url('/css/webfonts/Barlow-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Barlow";
+    font-weight: 600;
+    font-style: italic;
+    src: url('/css/webfonts/Barlow-SemiBoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Barlow";
+    font-weight: 700;
+    font-style: normal;
+    src: url('/css/webfonts/Barlow-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Barlow";
+    font-weight: 700;
+    font-style: italic;
+    src: url('/css/webfonts/Barlow-BoldItalic.ttf') format('truetype');
+}

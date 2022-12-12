@@ -18,7 +18,9 @@ sections:
           input_type: text
           antlers: false
       -
-        import: content
+        import: hero
+      -
+        import: main_content
   sidebar:
     display: Sidebar
     fields:

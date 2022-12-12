@@ -4,7 +4,7 @@ import Layout from "@/Layouts/Layout.vue";
 import { InertiaProgress } from "@inertiajs/progress";
 
 InertiaProgress.init({
-    color: '#ec4899',
+    color: '#a2efd6',
 });
 
 createInertiaApp({

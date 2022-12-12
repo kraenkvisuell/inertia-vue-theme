@@ -1,11 +1,16 @@
 export_paths:
+  - .env.example
+  - .gitignore
   - app/Http/Controllers/PagesController.php
   - app/Http/Middleware/HandleInertiaRequests.php
   - app/Http/Kernel.php
   - config/app.php
+  - config/filesystems.php
+  - config/statamic/assets.php
   - config/statamic/editions.php
   - config/statamic/sites.php
   - content
+  - jsconfig.json
   - package.json
   - public/css
   - public/assets
@@ -23,7 +28,7 @@ export_paths:
   - webpack.ssr.mix.js
 dependencies:
   inertiajs/inertia-laravel: ^0.6.3
-  kraenkvisuell/statamic-helpers: ^0.9
+  kraenkvisuell/statamic-helpers: '*'
   laravel/horizon: ^5.10
   league/flysystem-aws-s3-v3: ^3.6
   spatie/laravel-ray: ^1.31

@@ -1,6 +1,8 @@
 title: Video
 fields:
   -
+    import: headline
+  -
     handle: embed_code
     field:
       theme: material

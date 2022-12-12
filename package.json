@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "@tailwindcss/typography": "^0.5.1",
+        "@tailwindcss/typography": "^0.5.8",
         "autoprefixer": "^10.4.0",
         "cross-env": "^7.0",
         "css-loader": "^5.2.7",
@@ -28,6 +28,8 @@
         "@inertiajs/server": "^0.1.0",
         "@vitejs/plugin-vue": "^3.1.2",
         "@vue/server-renderer": "^3.2.40",
+        "laravel-mix-valet": "^1.4.0",
+        "tiny-emitter": "^2.1.0",
         "vue": "^3.2.40",
         "webpack-node-externals": "^3.0.0"
     }

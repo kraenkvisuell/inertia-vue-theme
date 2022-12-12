@@ -1,6 +1,8 @@
 title: Bilder-Übersicht
 fields:
   -
+    import: headline
+  -
     handle: images
     field:
       collapse: false

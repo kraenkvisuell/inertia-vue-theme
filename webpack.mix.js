@@ -1,3 +1,5 @@
+const fs = require('fs');
+const homedir = require('os').homedir();
 const path = require("path");
 const mix = require("laravel-mix");
 
@@ -18,8 +20,7 @@ mix
         stats: {
             children: true,
         },
+    })
+    .options({ 
+        processCssUrls: false
     });
-
-if (mix.inProduction()) {
-    mix.version();
-}

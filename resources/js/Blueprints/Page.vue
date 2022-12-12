@@ -1,25 +1,31 @@
 <template>
     <div>
         <Head :title="$page.props.browserTitle" />
-        <h1 class="text-2xl">Hallo Welt!</h1>
-
-        <ContentSets :sets="entry.content" />
+        
+        <ContentSets :sets="entry.main_content" />
     </div>
 </template>
 
 <script>
-import { Head } from "@inertiajs/inertia-vue3";
-import ContentSets from "@/Shared/ContentSets.vue";
+import { Head } from '@inertiajs/inertia-vue3'
+import ContentSets from '@/Sets/ContentSets.vue'
+import Headline from '@/Shared/Headline.vue'
+import helpers from '@/Mixins/helpers'
 
 export default {
     components: {
+        ContentSets,
         Head,
-        ContentSets
+        Headline
     },
+    mixins: [helpers],
     data() {
         return {
             entry: this.$page.props.entry
         };
+    },
+    mounted() {
+        console.log(this.raw(this.entry));
     }
 };
 </script>

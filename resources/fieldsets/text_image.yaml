@@ -1,0 +1,109 @@
+title: Text/Bild
+fields:
+  -
+    import: headline
+  -
+    handle: headline_position
+    field:
+      options:
+        above_both: 'Über Text und Bild'
+        above_text: 'Über Text'
+        above_image: 'Über Bild'
+      default: above_both
+      multiple: false
+      clearable: false
+      searchable: false
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Headline-Position
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      replicator_preview: false
+  -
+    handle: text
+    field:
+      collapse: false
+      always_show_set_button: false
+      previews: true
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - anchor
+        - table
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      antlers: false
+      remove_empty_nodes: trim
+      display: Text
+      type: bard
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    import: image
+  -
+    handle: distribution
+    field:
+      options:
+        even: 'halb / halb'
+        '40_60': 'Text 40% / Bild 60%'
+        '30_70': 'Text 30% / Bild 70%'
+        '70_30': 'Text 70% / Bild 30%'
+        '60_40': 'Text 60% / Bild 40%'
+      multiple: false
+      clearable: false
+      searchable: false
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: even
+      display: Aufteilung
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      instructions: 'Hat nur bei ausreichend breiten Bildschirmen Effekt'
+  -
+    handle: order
+    field:
+      options:
+        text_image: 'Text / Bild'
+        image_text: 'Bild / Text'
+      multiple: false
+      clearable: false
+      searchable: false
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: text_image
+      display: Reihenfolge
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    import: action_buttons

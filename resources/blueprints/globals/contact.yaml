@@ -1,0 +1,143 @@
+sections:
+  main:
+    display: Allgemein
+    fields:
+      -
+        handle: company
+        field:
+          input_type: text
+          antlers: false
+          display: Firmenbezeichung
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          width: 50
+      -
+        handle: main_email
+        field:
+          input_type: text
+          antlers: false
+          display: Haupt-E-Mail
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          width: 50
+      -
+        handle: main_phone
+        field:
+          input_type: text
+          antlers: false
+          display: Haupt-Telefonnummer
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          width: 50
+      -
+        handle: addresses
+        field:
+          collapse: false
+          previews: true
+          sets:
+            address:
+              display: Adresse
+              fields:
+                -
+                  handle: country
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Land
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    width: 33
+                -
+                  handle: address
+                  field:
+                    antlers: false
+                    display: Adresse
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    width: 66
+          display: Adressen
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  social_media:
+    display: 'Social Media'
+    fields:
+      -
+        handle: social_media_links
+        field:
+          collapse: false
+          previews: true
+          sets:
+            link:
+              display: Link
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Titel
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    width: 25
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: URL
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    width: 50
+                -
+                  handle: icon
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Icon
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: below
+                    visibility: visible
+                    always_save: false
+                    width: 25
+                    instructions: Optional
+          display: 'Social Media Links'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

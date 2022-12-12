@@ -1,0 +1,40 @@
+title: Headline
+fields:
+  -
+    handle: headline
+    field:
+      antlers: false
+      display: Headline
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 75
+  -
+    handle: headline_level
+    field:
+      options:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+        h5: H5
+        h6: H6
+      inline: false
+      cast_booleans: false
+      multiple: false
+      clearable: false
+      searchable: false
+      taggable: false
+      default: h2
+      display: Headline-Level
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 25
+      replicator_preview: false
