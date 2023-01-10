@@ -3,7 +3,7 @@
         <div class="w-full h-full">
             <video 
                 muted autoplay playsinline loop
-                v-if="$page.props.globals.website.bg_video.url"
+                v-if="$page.props.globals.website.bg_video"
                 class="w-full h-full object-cover"
             >
                 <source :src="$page.props.globals.website.bg_video.url" />

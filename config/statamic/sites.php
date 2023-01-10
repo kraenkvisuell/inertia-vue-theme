@@ -15,8 +15,8 @@ return [
 
     'sites' => [
         'default' => [
-            'name' => 'English',
-            'locale' => 'en_us',
+            'name' => 'Deutsch',
+            'locale' => 'de',
             'url' => '/',
         ],
     ],

@@ -2,8 +2,8 @@ export_paths:
   - .env.example
   - .gitignore
   - app/Http/Controllers/PagesController.php
-  - app/Http/Middleware/HandleInertiaRequests.php
   - app/Http/Kernel.php
+  - app/Http/Middleware/HandleInertiaRequests.php
   - config/app.php
   - config/filesystems.php
   - config/statamic/assets.php
@@ -12,12 +12,13 @@ export_paths:
   - content
   - jsconfig.json
   - package.json
-  - public/css
   - public/assets
+  - public/css
+  - public/img
   - public/js
   - resources/blueprints
-  - resources/fieldsets
   - resources/css
+  - resources/fieldsets
   - resources/js
   - resources/users/roles.yaml
   - resources/views
