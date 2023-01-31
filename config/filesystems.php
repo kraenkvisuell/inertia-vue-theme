@@ -51,6 +51,7 @@ return [
             'bucket' => env('DO_SPACES_BUCKET'),
             'root' => env('DO_SPACES_ROOT'),
             'cdn' => env('DO_SPACES_CDN'),
+            'url' => env('DO_SPACES_CDN'),
             'visibility' => 'public',
         ],
 
