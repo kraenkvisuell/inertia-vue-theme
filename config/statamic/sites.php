@@ -17,7 +17,12 @@ return [
         'default' => [
             'name' => 'Deutsch',
             'locale' => 'de',
-            'url' => '/',
+            'url' => '/de',
+        ],
+        'en' => [
+            'name' => 'English',
+            'locale' => 'en',
+            'url' => '/en',
         ],
     ],
 ];

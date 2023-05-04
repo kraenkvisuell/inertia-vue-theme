@@ -1,9 +1,11 @@
 <template>
-    <component 
-        v-for="set in sets" 
-        :is="studly(set.type)" 
-        :set="set"
-    />
+    <div>
+        <component 
+            v-for="set in sets" 
+            :is="studly(set.type)" 
+            :set="set"
+        />
+    </div>
 </template>
 
 <script>
@@ -26,6 +28,7 @@ export default {
     },
     props: {
         sets: Array,
+        entry: Object,
     },
     methods: {
         studly(str) {

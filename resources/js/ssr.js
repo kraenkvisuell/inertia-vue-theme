@@ -1,20 +1,21 @@
-import { createSSRApp, h } from "vue";
-import { renderToString } from "@vue/server-renderer";
-import { createInertiaApp } from "@inertiajs/inertia-vue3";
-import createServer from "@inertiajs/server";
-import Layout from "@/Layouts/Layout.vue";
+import { createSSRApp, h } from 'vue'
+import { renderToString } from '@vue/server-renderer'
+import { createInertiaApp } from '@inertiajs/vue3'
+import createServer from '@inertiajs/vue3/server'
+import { createPinia } from 'pinia'
+const pinia = createPinia()
 
 createServer((page) => createInertiaApp({
     page,
     render: renderToString,
     resolve: name => {
-        const page = require(`./Blueprints/${name}`).default;
-        page.layout = page.layout || Layout;
-        return page;
+        const pages = import.meta.glob('./Blueprints/**/*.vue', { eager: true })
+        return pages[`./Blueprints/${name}.vue`]
     },
-    setup({ app, props, plugin }) {
-      return createSSRApp({
-        render: () => h(app, props),
-      }).use(plugin);
+    
+    setup({ App, props, plugin }) {
+        const VueApp = createSSRApp({ render: () => h(App, props) });
+
+        VueApp.use(pinia).use(plugin).mount(el);
     },
 }));

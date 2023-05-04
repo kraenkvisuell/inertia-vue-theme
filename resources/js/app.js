@@ -1,23 +1,28 @@
-import { createApp, h } from 'vue'
-import { createInertiaApp } from '@inertiajs/inertia-vue3'
-import Layout from '@/Layouts/Layout.vue'
-import { InertiaProgress } from '@inertiajs/progress'
+import { createSSRApp, h } from 'vue'
+import { createInertiaApp } from '@inertiajs/vue3'
+import { createPinia } from 'pinia'
+import helpers from '@/Mixins/helpers'
+const pinia = createPinia()
 
-InertiaProgress.init({
-    color: '#a2efd6',
-});
+import _ from 'lodash'
+window._ = _
 
 createInertiaApp({
+    progress: {
+        color: '#ff269e',
+    },
     title: (title) => `${title}`,
     resolve: name => {
-        const page = require(`./Blueprints/${name}`).default
-        page.layout = page.layout || Layout
-        return page
+        const pages = import.meta.glob('./Blueprints/*.vue', { eager: true })
+        return pages[`./Blueprints/${name}.vue`]
     },
-    
+
     setup({ el, App, props, plugin }) {
-        createApp({ render: () => h(App, props) })
+        const VueApp = createSSRApp({ render: () => h(App, props) });
+        VueApp
+            .use(pinia)
             .use(plugin)
-            .mount(el)
+            .mixin(helpers)
+            .mount(el);
     },
 });

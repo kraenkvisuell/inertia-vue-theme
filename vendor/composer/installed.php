@@ -3,7 +3,7 @@
         'name' => 'kraenkvisuell/inertia-vue-theme',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '271d55dcf3ce9faac424668fec3b667fb5ce0d40',
+        'reference' => 'a2f1c983241f617f52f56e601533eca0a0de4279',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'kraenkvisuell/inertia-vue-theme' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '271d55dcf3ce9faac424668fec3b667fb5ce0d40',
+            'reference' => 'a2f1c983241f617f52f56e601533eca0a0de4279',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

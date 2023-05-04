@@ -4,6 +4,17 @@ sections:
     display: Hauptteil
     fields:
       -
+        handle: is_home
+        field:
+          default: false
+          display: 'Ist Startseite'
+          type: toggle
+          icon: toggle
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: title
         field:
           type: text
@@ -12,15 +23,21 @@ sections:
             - required
           display: Titel
           instructions_position: above
-          listable: hidden
+          listable: true
           visibility: visible
           always_save: false
           input_type: text
           antlers: false
+          localizable: false
       -
         import: hero
       -
-        import: main_content
+        import: main_replicator
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo
   sidebar:
     display: Sidebar
     fields:
@@ -29,8 +46,3 @@ sections:
         field:
           type: slug
           localizable: true
-  seo:
-    display: SEO
-    fields:
-      -
-        import: seo

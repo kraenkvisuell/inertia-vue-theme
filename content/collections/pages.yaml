@@ -1,4 +1,8 @@
 title: Seiten
+sites:
+  - default
+  - en
+propagate: false
 template: default
 layout: layout
 revisions: false
@@ -8,3 +12,4 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+    refresh: true

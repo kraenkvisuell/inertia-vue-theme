@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html class="h-full">
+<html class="h-full bg-light">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link rel="icon" href="/img/favicon.png" type="image/png">
-        <script src="https://kit.fontawesome.com/d0563675cd.js" crossorigin="anonymous"></script>
-        <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
-        <script src="{{ mix('/js/app.js') }}" defer></script>
+
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
         @inertiaHead
     </head>
-    <body class="h-full">
-        @inertia
+
+    <body class="min-h-full font-main">
+        <div class="">
+            @inertia
+        </div>
+
+        <div
+            id="modals"
+            class="fixed top-0 left-0 w-full z-30"
+        >
+        </div>
     </body>
 </html>

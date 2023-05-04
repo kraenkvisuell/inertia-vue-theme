@@ -11,7 +11,7 @@ sections:
             - required
           localizable: true
       -
-        import: content
+        import: main_replicator
   sidebar:
     display: Sidebar
     fields:

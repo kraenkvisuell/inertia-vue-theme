@@ -1,30 +1,12 @@
 <template>
     <div 
         class="
-            font-copy text-white
-            flex flex-col w-full h-full
+            font-copy text-white text-copy-base
+            flex flex-col w-full
         "
     >
         <Head :title="$page.props.globals.website.browser_title" />
 
-        <GradientVideo />
-
-        <MegaMenu />
-
-        <Link 
-            href="/"
-            class="
-                absolute
-                z-20 top-[12px] left-[12px] md:top-[38px] md:left-[38px]
-                transform-opacity duration-500
-            " 
-            :class="{
-                'opacity-100': !menuIsVisible,
-                'opacity-20': menuIsVisible
-            }" 
-        >
-            <img src="/img/logo.svg" class="w-[150px] md:w-[242px]" />
-        </Link>
         
 
         <transition name="page" mode="out-in" appear>
@@ -47,12 +29,9 @@
 </template>
 
 <script>
-import { Head } from '@inertiajs/inertia-vue3'
-import { Link } from '@inertiajs/inertia-vue3'
+import { Head } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
 import eventBus from '@/eventBus'
-
-import MegaMenu from '@/Nav/MegaMenu.vue'
-import GradientVideo from '@/Parts/GradientVideo.vue'
 
 export default {
     data() {
@@ -62,9 +41,7 @@ export default {
     },
     components: {
     Head,
-    Link,
-    MegaMenu,
-    GradientVideo
+    Link
 },
     mounted() {
         eventBus.$on('menu-toggled', (menuIsVisible) => {

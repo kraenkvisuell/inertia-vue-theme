@@ -3,7 +3,29 @@ fields:
   -
     import: headline
   -
-    handle: image
+    handle: kind
+    field:
+      options:
+        image_file: Bild-Datei
+        video_file: Video-Datei
+        url: URL
+        random_url: 'Zufallsbild (Picsum)'
+      multiple: false
+      clearable: false
+      searchable: false
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: image_file
+      display: Art
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: false
+  -
+    handle: image_file
     field:
       mode: list
       container: assets
@@ -11,13 +33,132 @@ fields:
       allow_uploads: true
       show_filename: true
       max_files: 1
-      display: Bild
+      display: Bild-Datei
       type: assets
       icon: assets
       listable: hidden
       instructions_position: above
       visibility: visible
       always_save: false
+      width: 50
+      validate:
+        - 'mimes:jpg,webp,gif,png'
+      if:
+        kind: 'equals image_file'
+  -
+    handle: fallback_image_file
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: Fallback-Bild-Datei
+      instructions: 'Für den Fall, dass die primäre Datei ein WebP ist.'
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      always_save: false
+      width: 50
+      validate:
+        - 'mimes:jpg,gif,png'
+      if:
+        kind: 'equals image_file'
+  -
+    handle: video_file
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: Video-Datei
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 50
+      validate:
+        - 'mimes:mp4,webp'
+      if:
+        kind: 'equals video_file'
+      replicator_preview: false
+  -
+    handle: fallback_video_file
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: Fallback-Video-Datei
+      instructions: 'Für den Fall, dass die primäre Datei ein WebM ist.<br>Bei WebM mit transparentem Hintergrund sollte für Safari ein MOV hinterlegt werden'
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      always_save: false
+      width: 50
+      validate:
+        - 'mimes:mp4,mov'
+      if:
+        kind: 'equals video_file'
+      replicator_preview: false
+  -
+    handle: image_url
+    field:
+      input_type: text
+      antlers: false
+      display: Bild-URL
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        kind: 'equals url'
+  -
+    handle: image_width
+    field:
+      input_type: text
+      antlers: false
+      display: Breite
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        kind: 'equals random_url'
+      validate:
+        - integer
+        - 'min:16'
+  -
+    handle: image_height
+    field:
+      input_type: text
+      antlers: false
+      display: Höhe
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        kind: 'equals random_url'
+      validate:
+        - integer
+        - 'min:16'
   -
     handle: caption
     field:
@@ -30,6 +171,7 @@ fields:
       visibility: visible
       always_save: false
       width: 50
+      replicator_preview: false
   -
     handle: credits
     field:
@@ -43,3 +185,4 @@ fields:
       visibility: visible
       always_save: false
       width: 50
+      replicator_preview: false

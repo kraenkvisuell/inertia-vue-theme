@@ -16,6 +16,3 @@ yarn-error.log
 .DS_Store
 /.idea
 /.vscode
-/content/collections/**/*.md
-/content/trees/**/*
-/content/globals/**/*

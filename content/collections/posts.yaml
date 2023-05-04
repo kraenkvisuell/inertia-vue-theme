@@ -1,6 +1,6 @@
 title: Posts
 sites:
-  - de
+  - default
   - en
 propagate: false
 template: default

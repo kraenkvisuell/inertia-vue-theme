@@ -1,31 +1,35 @@
 <template>
-    <div>
-        <Head :title="$page.props.browserTitle" />
-        
-        <ContentSets :sets="entry.main_content" />
-    </div>
+    <Layout>
+        <div>
+            <Head :title="entry.title" />
+
+            <ContentSets
+                :sets="entry.main_replicator ? entry.main_replicator : []"
+            />
+        </div>
+    </Layout>
 </template>
 
 <script>
-import { Head } from '@inertiajs/inertia-vue3'
-import ContentSets from '@/Sets/ContentSets.vue'
-import Headline from '@/Shared/Headline.vue'
-import helpers from '@/Mixins/helpers'
+import { Head } from '@inertiajs/vue3'
+import ContentSets from '@/Shared/ContentSets.vue'
+import Layout from '@/Layouts/Layout.vue'
 
 export default {
     components: {
-        ContentSets,
         Head,
-        Headline
+        ContentSets,
+        Layout,
     },
-    mixins: [helpers],
     data() {
         return {
-            entry: this.$page.props.entry
+            entry: this.$page.props.entry,
         };
     },
-    mounted() {
-        console.log(this.raw(this.entry));
+    computed: {
+        isHome(){
+            return this.entry.url == '/'
+        },
     }
 };
 </script>

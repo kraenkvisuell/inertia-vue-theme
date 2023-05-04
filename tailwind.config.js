@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
@@ -10,70 +10,40 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-        'sm': '14px',
-        'base': '16px',
-        'lg': '20px',
-        'xl': '30px',
-        '2xl': '50px',
-        'hd-small': '30px',
-        'hd-base': '50px',
-        'hd-lg': '100px',
+        'copy-2xs': '10px',
+        'copy-xs': '12px',
+        'copy-sm': '14px',
+        'copy-base': '16px',
+        'copy-lg': '20px',
+        'copy-xl': '30px',
+        'copy-2xl': '50px',
+
+        'headline-xs': '16px',
+        'headline-sm': '18px',
+        'headline-base': '21px',
+        'headline-lg': '24px',
+        'headline-xl': '30px',
     },
     extend: {
         lineHeight: {
             'tight': '1.07em',
         },
         fontFamily: {
-            'copy': ['Barlow', ...defaultTheme.fontFamily.sans],
-            'headline': ['Geometris', ...defaultTheme.fontFamily.sans],
+            'copy': ['Source Sans Pro', 'serif'],
+            'headline': ['Lily Script One', 'sans-serif'],
         },    
         colors: {
-            'bg': '#002552',
-            'nav-bg': '#004692',
-            'dark-blue': '#001256',
-            'blue': '#2676CC',
-            'cyan': '#a2efd6',
-
+            "lightest": colors.slate[50],
+            "light": colors.slate[100],
+            "medium": colors.slate[500],
+            "dark": colors.slate[700],
+            "highlight-medium": colors.fuchsia[500],
+            "secondary-light": colors.lime[400],
+            "secondary-medium": colors.lime[600],
         },
         screens: {
             '3xl': '1938px',
         },
-        typography: (theme) => ({
-            DEFAULT: {
-                css: {
-                    color: theme('colors.white'),
-                    li: {
-                        margin: 0,
-                        p: {
-                            margin: 0,
-                        }
-                    },
-                    'h1, h2, h3, h4, h5, h6': {
-                        'color': theme('colors.white'),
-                        'line-height': '1.05em',
-                        'font-family': 'Geometris',
-                        'font-weight': 200,
-                        'text-transform': 'uppercase',
-                        'letter-spacing': '0.1em',
-                    },
-                    'h1': {
-                        'font-size': theme('fontSize.hd-base'),
-                        '@media (min-width: theme("screens.sm"))': {
-                            'font-size': theme('fontSize.hd-lg'),
-                        },
-                    },
-                    'h2, h3, h4, h5, h6': {
-                        'font-size': theme('fontSize.hd-small'),
-                        '@media (min-width: theme("screens.sm"))': {
-                            'font-size': theme('fontSize.hd-base'),
-                        },
-                    }
-                },
-            },
-        }),
     },
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  }
 }
