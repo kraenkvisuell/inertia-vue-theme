@@ -9,6 +9,11 @@ module.exports = {
     './content/**/*.md'
   ],
   theme: {
+    fontFamily: {
+        'copy': ['Source Serif Pro', 'serif'],
+        'headline': ['Source Sans Pro', 'sans-serif'],
+        'navi': ['Source Sans Pro', 'sans-serif'],
+    },
     fontSize: {
         'copy-2xs': '10px',
         'copy-xs': '12px',
@@ -18,6 +23,13 @@ module.exports = {
         'copy-xl': '30px',
         'copy-2xl': '50px',
 
+        'navi-xs': '12px',
+        'navi-sm': '14px',
+        'navi-base': '16px',
+        'navi-lg': '20px',
+        'navi-xl': '30px',
+
+        'headline-xs': '16px',
         'headline-xs': '16px',
         'headline-sm': '18px',
         'headline-base': '21px',
@@ -25,24 +37,27 @@ module.exports = {
         'headline-xl': '30px',
     },
     extend: {
-        lineHeight: {
-            'tight': '1.07em',
-        },
-        fontFamily: {
-            'copy': ['Source Sans Pro', 'serif'],
-            'headline': ['Lily Script One', 'sans-serif'],
-        },    
         colors: {
-            "lightest": colors.slate[50],
-            "light": colors.slate[100],
-            "medium": colors.slate[500],
-            "dark": colors.slate[700],
-            "highlight-medium": colors.fuchsia[500],
+            "lightest": '#F3F2EF',
+            "medium": '#868385',
+            "dark": '#3d3b3c',
+            "darkest": '#191919',
+            "highlight-medium": '#FFB000',
             "secondary-light": colors.lime[400],
             "secondary-medium": colors.lime[600],
         },
+        lineHeight: {
+            'tight': '1.07em',
+            'snug': '1.12em',
+        },
+        height: {
+            'screen': 'calc(var(--vh) * 100)',
+        },
         screens: {
             '3xl': '1938px',
+        },
+        transitionProperty: {
+            'position': 'position',
         },
     },
   }

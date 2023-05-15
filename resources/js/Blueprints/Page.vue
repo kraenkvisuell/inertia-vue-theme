@@ -1,13 +1,11 @@
 <template>
-    <Layout>
-        <div>
-            <Head :title="entry.title" />
+    <div>
+        <Head :title="entry.title" />
 
-            <ContentSets
-                :sets="entry.main_replicator ? entry.main_replicator : []"
-            />
-        </div>
-    </Layout>
+        <ContentSets
+            :sets="entry.main_replicator ? entry.main_replicator : []"
+        />
+    </div>
 </template>
 
 <script>
@@ -16,6 +14,7 @@ import ContentSets from '@/Shared/ContentSets.vue'
 import Layout from '@/Layouts/Layout.vue'
 
 export default {
+    layout: Layout,
     components: {
         Head,
         ContentSets,

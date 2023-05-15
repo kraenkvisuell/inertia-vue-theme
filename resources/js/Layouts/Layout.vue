@@ -1,52 +1,39 @@
 <template>
-    <div 
-        class="
-            font-copy text-white text-copy-base
-            flex flex-col w-full
-        "
-    >
+    <div class="flex flex-col w-full min-h-full">
         <Head :title="$page.props.globals.website.browser_title" />
 
-        
+        <Header class="z-30 fixed top-0 left-0 w-full" />
 
         <transition name="page" mode="out-in" appear>
-            <main :key="$page.url" 
-                class="
-                    page w-full z-10
-                    px-[16px] sm:px-[26px] md:px-[38px]
-                    pt-[120px] md:pt-[190px]
-                    transform-opacity duration-500
-                "
-                :class="{
-                    'opacity-100': !menuIsVisible,
-                    'opacity-0': menuIsVisible
-                }" 
-            >
+            
+            <main :key="$page.url" class="
+                w-full min-h-full z-10
+                px-[16px] sm:px-[26px] md:px-[38px]
+                pt-[120px] md:pt-[190px]
+                pb-[120px] md:pb-[190px]
+            ">
                 <slot />
+            
             </main>
         </transition>
+
+        <Footer class="z-20 absolute bottom-0 left-0 w-full" />
     </div>
 </template>
 
 <script>
 import { Head } from '@inertiajs/vue3'
-import { Link } from '@inertiajs/vue3'
-import eventBus from '@/eventBus'
+import Footer from '@/Parts/Footer.vue'
+import Header from '@/Parts/Header.vue'
 
 export default {
-    data() {
-        return {
-            menuIsVisible: false,
-        }
-    },
     components: {
-    Head,
-    Link
-},
+        Footer,
+        Head, 
+        Header, 
+    },
     mounted() {
-        eventBus.$on('menu-toggled', (menuIsVisible) => {
-            this.menuIsVisible = menuIsVisible
-        })
+        
     }
 };
 </script>
@@ -54,7 +41,7 @@ export default {
 <style>
     .page-enter-active,
     .page-leave-active {
-        transition: opacity 0.5s ease;
+        transition: all .5s ease;
     }
 
     .page-enter-from,

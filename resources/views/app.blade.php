@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full bg-light">
+<html class="h-full bg-lightest">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -9,10 +9,8 @@
         @inertiaHead
     </head>
 
-    <body class="min-h-full font-main">
-        <div class="">
-            @inertia
-        </div>
+    <body class="h-full font-main">
+        @inertia
 
         <div
             id="modals"

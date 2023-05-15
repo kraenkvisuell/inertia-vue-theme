@@ -1,27 +1,21 @@
 <template>
-    <nav class="bg-slate-200 p-2">
-        <ul class="flex gap-4 flex-wrap">
-            <li
-                v-for="item in $page.props.shared.mainNav"
-            >
-                <Link 
-                    :href="item.url" 
-                    :class="{
-                        'underline': !item.is_current,
-                        'text-pink-500': item.is_current
-                    }"
-                >
-                    {{ item.title }}
-                </Link>
-            </li>
-        </ul>
-    </nav>
+<nav>
+    <ul class="
+        flex gap-x-[20px] gap-y-[8px] flex-wrap
+        font-navi text-medium text-navi-base leading-tight
+    ">
+        <MainNavItem 
+            v-for="item in $page.props.nav.main_nav" 
+            :item="item" 
+        />
+    </ul>
+</nav>
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue3";
+import MainNavItem from '@/Nav/MainNavItem.vue'
 
 export default {
-    components: { Link }
+    components: { MainNavItem },
 };
 </script>

@@ -53,8 +53,7 @@ return [
         */
 
         'cache' => false,
-        'cache_path' => public_path('img'),
-
+        
         /*
         |--------------------------------------------------------------------------
         | Image Manipulation Presets
@@ -67,7 +66,7 @@ return [
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            //
         ],
 
         /*
@@ -81,7 +80,7 @@ return [
         |
         */
 
-        'generate_presets_on_upload' => true,
+        'generate_presets_on_upload' => false,
 
     ],
 

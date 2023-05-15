@@ -23,14 +23,12 @@
         "dayjs": "^1.11.7",
         "laravel-vite-plugin": "^0.7.3",
         "lodash": "^4.17.21",
-        "nanoid": "^4.0.1",
         "pinia": "^2.0.33",
         "tiny-emitter": "^2.1.0",
         "vite": "^4.0.4",
         "vue": "^3.2.41",
         "vue-loader": "^17.0.1",
         "vue3-lottie": "^2.4.0",
-        "vue3-marquee-slider": "^1.0.4",
         "webpack-node-externals": "^3.0.0"
     }
 }

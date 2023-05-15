@@ -2,24 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Inertia\Inertia;
-use Illuminate\Support\Str;
 use Facades\Statamic\CP\LivePreview;
+use Illuminate\Support\Str;
+use Inertia\Inertia;
 use Kraenkvisuell\StatamicHelpers\Facades\Helper;
 
 class PagesController extends Controller
 {
-    public function show($slug = '')
+    public function show($locale = 'de', $slug = 'home')
     {
 
         if (request()->get('live-preview')) {
             $entry = LivePreview::item(request()->statamicToken());
-        } elseif (!$slug) {
-            $entry = Helper::entry(isHome: true) ?: Helper::entry(slug: 'home');
         } else {
-            $entry = Helper::entry(slug: $slug);
+            $site = $locale == 'de' ? 'default' : $locale;
+            $entry = Helper::entry(slug: $slug, site: $site);
         }
-        
 
         if (! $entry) {
             return abort(404);

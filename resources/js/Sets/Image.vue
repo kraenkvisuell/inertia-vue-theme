@@ -9,14 +9,16 @@
         </component>
 
         <figure>
-            <img 
-                v-if="set.kind.value != 'video_file'"
-                :src="imageUrl"
-                :alt="imageAlt"
-                loading="lazy"
-                class="max-w-full max-h-64"
-            />
-
+            <picture>
+                <img 
+                    v-if="set.kind.value != 'video_file'"
+                    :src="imageUrl"
+                    :alt="imageAlt"
+                    loading="lazy"
+                    class="max-w-full max-h-64"
+                />
+            </picture>
+            
             <video
                 v-if="set.kind.value == 'video_file'"
                 autoplay muted loop playsinline
@@ -67,7 +69,7 @@
             }
         },
         mounted() {
-            console.log(this.raw(this.set));
+            // console.log(this.raw(this.set));
         }
     };
 </script>

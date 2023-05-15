@@ -1,3 +1,11 @@
+function setVH() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVH();
+
+window.addEventListener('resize', setVH);
+
 import { createSSRApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import { createPinia } from 'pinia'
@@ -9,7 +17,7 @@ window._ = _
 
 createInertiaApp({
     progress: {
-        color: '#ff269e',
+        color: '#FFB000',
     },
     title: (title) => `${title}`,
     resolve: name => {

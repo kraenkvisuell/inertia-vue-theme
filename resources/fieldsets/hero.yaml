@@ -29,6 +29,7 @@ fields:
       visibility: visible
       always_save: false
       width: 50
+      localizable: true
   -
     handle: hero_text
     field:
@@ -61,3 +62,4 @@ fields:
       visibility: visible
       always_save: false
       width: 50
+      localizable: true

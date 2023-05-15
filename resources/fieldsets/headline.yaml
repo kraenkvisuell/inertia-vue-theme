@@ -12,6 +12,7 @@ fields:
       visibility: visible
       always_save: false
       width: 75
+      localizable: true
   -
     handle: headline_level
     field:
@@ -38,3 +39,4 @@ fields:
       always_save: false
       width: 25
       replicator_preview: false
+      localizable: false

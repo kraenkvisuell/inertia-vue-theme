@@ -28,7 +28,7 @@ sections:
           always_save: false
           input_type: text
           antlers: false
-          localizable: false
+          localizable: true
       -
         import: hero
       -

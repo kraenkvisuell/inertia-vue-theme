@@ -49,12 +49,22 @@ return [
             'endpoint' => env('DO_SPACES_ENDPOINT'),
             'region' => env('DO_SPACES_REGION'),
             'bucket' => env('DO_SPACES_BUCKET'),
-            'root' => env('DO_SPACES_ROOT'),
+            'root' => env('DO_SPACES_ROOT').'/assets',
             'cdn' => env('DO_SPACES_CDN'),
-            'url' => env('DO_SPACES_CDN'),
             'visibility' => 'public',
         ],
 
+        'presets' => [
+            'driver' => 's3',
+            'key' => env('DO_SPACES_KEY'),
+            'secret' => env('DO_SPACES_SECRET'),
+            'endpoint' => env('DO_SPACES_ENDPOINT'),
+            'region' => env('DO_SPACES_REGION'),
+            'bucket' => env('DO_SPACES_BUCKET'),
+            'root' => env('DO_SPACES_ROOT').'/presets',
+            'cdn' => env('DO_SPACES_CDN'),
+            'visibility' => 'public',
+        ],
     ],
 
     /*

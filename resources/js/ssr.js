@@ -1,3 +1,11 @@
+function setVH() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVH();
+
+window.addEventListener('resize', setVH);
+
 import { createSSRApp, h } from 'vue'
 import { renderToString } from '@vue/server-renderer'
 import { createInertiaApp } from '@inertiajs/vue3'
