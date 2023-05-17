@@ -36,7 +36,7 @@
     @apply font-headline;
     margin-top: 1em;
 }
-.editor h2:first, .editor h3:first, .editor h4:first {
+.editor h2:first-child, .editor h3:first-child, .editor h4:first-child {
     margin-top: 0;
 }
 .editor blockquote {
@@ -56,7 +56,7 @@
 .editor p, .editor ul {
     margin-top: 1em;
 }
-.editor p:first {
+.editor p:first-child, .editor ul:first-child {
     margin-top: 0;
 }
 
