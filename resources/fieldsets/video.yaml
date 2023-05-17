@@ -3,6 +3,59 @@ fields:
   -
     import: headline
   -
+    handle: video_kind
+    field:
+      options:
+        embed: 'Embed Code'
+        file: 'Datei (z.B. MP4)'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: false
+      cast_booleans: false
+      default: embed
+      type: select
+      display: Video-Art
+      icon: select
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: aspect_width
+    field:
+      input_type: text
+      default: '16'
+      antlers: false
+      type: text
+      display: 'Seitenverhältnis: Breite'
+      icon: text
+      instructions: 'z.B. "16" (bei 16:9)'
+      localizable: false
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: aspect_height
+    field:
+      input_type: text
+      default: '9'
+      antlers: false
+      type: text
+      display: 'Seitenverhältnis: Höhe'
+      icon: text
+      instructions: 'z.B. "9" (bei 16:9)'
+      localizable: false
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
     handle: embed_code
     field:
       theme: material
@@ -13,14 +66,81 @@ fields:
       key_map: default
       line_numbers: true
       line_wrapping: true
-      display: Embed-Code
+      antlers: false
       type: code
+      display: 'Embed Code'
       icon: code
+      localizable: false
       listable: hidden
       instructions_position: above
       visibility: visible
-      always_save: false
-      localizable: true
+      hide_display: false
+      if:
+        video_kind: 'equals embed'
+  -
+    handle: video_file
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: false
+      type: assets
+      display: Video-Datei
+      icon: assets
+      localizable: false
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        video_kind: 'equals file'
+  -
+    handle: fallback_video_file
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Alternative Video-Datei'
+      icon: assets
+      instructions: 'z.B. wenn die primäre Datei ein WebM ist - oder bei transparenten Videos (Safari-Version und -Restliche Browser)'
+      localizable: false
+      width: 50
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      hide_display: false
+      if:
+        video_kind: 'equals file'
+  -
+    handle: video_poster
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Video-Poster
+      icon: assets
+      instructions: 'Standbild für den Anfang'
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        video_kind: 'equals file'
   -
     handle: caption
     field:

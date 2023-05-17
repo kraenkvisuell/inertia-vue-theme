@@ -1,5 +1,5 @@
 ---
-id: 0d798166-b7af-4ac3-a8d8-b99ec576d151
-origin: 412d5f78-9e7b-4713-bdf4-98008ccd6809
+id: b7c032e5-04ee-46d1-bb5c-3521f06cded2
+origin: 50f6aa2d-8f65-4943-83a1-364453063b4f
 title: 'Privacy Policy'
 ---

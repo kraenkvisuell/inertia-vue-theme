@@ -6,6 +6,8 @@
 
 @import "tailwindcss/utilities";
 
+@import "video.js/dist/video-js.min";
+
 * {
     position: relative;
 }
@@ -13,3 +15,122 @@
 #app {
     @apply h-full overflow-auto;
 }
+
+.iframe-container iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iframe-container p {
+    display: none;
+}
+
+.video-js * {
+    position: static;
+}
+
+.editor h2, .editor h3, .editor h4 {
+    @apply font-headline;
+    margin-top: 1em;
+}
+.editor h2:first, .editor h3:first, .editor h4:first {
+    margin-top: 0;
+}
+.editor blockquote {
+    @apply border-l-[5px] ml-[5px] pl-[12px] border-highlight-medium my-[20px] text-medium;
+}
+
+.editor h2 {
+    @apply text-headline-xl;
+}
+.editor h3 {
+    @apply text-headline-lg;
+}
+.editor h4 {
+    @apply text-headline-base;
+}
+
+.editor p, .editor ul {
+    margin-top: 1em;
+}
+.editor p:first {
+    margin-top: 0;
+}
+
+.editor ul {
+    @apply pl-[25px];
+    list-style-type: disc;
+}
+.editor ul p {
+    margin-top: 0;
+}
+.editor ul li {
+    @apply pl-[5px];
+}
+
+.editor ol {
+    @apply pl-[25px];
+    list-style-type: numeric;
+}
+.editor ol p {
+    margin-top: 0;
+}
+.editor ol li {
+    @apply pl-[5px];
+}
+
+.editor a {
+    @apply text-highlight-medium underline;
+}
+
+/* * {
+    outline: 2px dotted red;
+}
+* > * {
+    outline: 2px dotted green;
+}
+* > * > * {
+    outline: 2px dotted blue;
+}
+* > * > * > * {
+    outline: 2px dotted brown;
+}
+* > * > * > * > * {
+    outline: 2px dotted orange;
+}
+* > * > * > * > * > * {
+    outline: 2px dotted blueviolet;
+}
+* > * > * > * > * > * > * {
+    outline: 2px dotted palevioletred;
+}
+* > * > * > * > * > * > * > * {
+    outline: 2px dotted royalblue;
+}
+* > * > * > * > * > * > * > * > * {
+    outline: 2px dotted yellowgreen;
+}
+* > * > * > * > * > * > * > * > * > * {
+    outline: 2px dotted thistle;
+}
+* > * > * > * > * > * > * > * > * > * > * {
+    outline: 2px dotted turquoise;
+}
+* > * > * > * > * > * > * > * > * > * > * > * {
+    outline: 2px dotted brown;
+}
+* > * > * > * > * > * > * > * > * > * > * > * > * {
+    outline: 2px dotted red;
+}
+* > * > * > * > * > * > * > * > * > * > * > * > * > * {
+    outline: 2px dotted green;
+}
+* > * > * > * > * > * > * > * > * > * > * > * > * > * > * {
+    outline: 2px dotted blue;
+}
+* > * > * > * > * > * > * > * > * > * > * > * > * > * > * > * {
+    outline: 2px dotted black;
+} */

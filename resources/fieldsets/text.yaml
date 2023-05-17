@@ -11,15 +11,13 @@ fields:
       buttons:
         - h2
         - h3
+        - h4
         - bold
         - italic
         - unorderedlist
         - orderedlist
-        - removeformat
         - quote
         - anchor
-        - table
-        - h4
       save_html: false
       toolbar_mode: fixed
       link_noopener: false
@@ -40,5 +38,8 @@ fields:
       visibility: visible
       always_save: false
       localizable: true
+      smart_typography: false
+      inline: false
+      hide_display: false
   -
     import: action_buttons

@@ -6,6 +6,7 @@ export_paths:
   - app/Http/Middleware/HandleInertiaRequests.php
   - config/app.php
   - config/filesystems.php
+  - config/statamic-helpers.php
   - config/statamic/assets.php
   - config/statamic/editions.php
   - config/statamic/sites.php
@@ -29,7 +30,7 @@ export_paths:
   - postcss.config.js
 dependencies:
   inertiajs/inertia-laravel: ^0.6.9
-  kraenkvisuell/statamic-helpers: ^1.0
+  kraenkvisuell/statamic-helpers: '*'
   laravel/horizon: ^5.10
   league/flysystem-aws-s3-v3: ^3.6
   spatie/laravel-ray: ^1.31

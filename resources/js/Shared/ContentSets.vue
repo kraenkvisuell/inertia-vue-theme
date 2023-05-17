@@ -1,9 +1,12 @@
 <template>
-    <component 
-        v-for="set in sets" 
-        :is="studly(set.type)" 
-        :set="set"
-    />
+<div class="grid gap-[80px]">
+    <div v-for="set in sets">
+        <component 
+            :is="studly(set.type)" 
+            :set="set"
+        />
+    </div>
+</div>
 </template>
 
 <script>
@@ -29,6 +32,9 @@ export default {
         studly(str) {
             return upperFirst(camelCase(str));
         }
+    },
+    mounted() {
+       //console.log(this.raw(this.sets));
     }
 };
 </script>

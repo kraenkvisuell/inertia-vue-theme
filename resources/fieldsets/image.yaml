@@ -3,7 +3,7 @@ fields:
   -
     import: headline
   -
-    handle: kind
+    handle: image_kind
     field:
       options:
         image_file: Bild-Datei
@@ -24,6 +24,7 @@ fields:
       instructions_position: above
       visibility: visible
       replicator_preview: false
+      localizable: false
   -
     handle: image_file
     field:
@@ -44,7 +45,8 @@ fields:
       validate:
         - 'mimes:jpg,webp,gif,png'
       if:
-        kind: 'equals image_file'
+        image_kind: 'equals image_file'
+      localizable: false
   -
     handle: fallback_image_file
     field:
@@ -66,7 +68,8 @@ fields:
       validate:
         - 'mimes:jpg,gif,png'
       if:
-        kind: 'equals image_file'
+        image_kind: 'equals image_file'
+      localizable: false
   -
     handle: video_file
     field:
@@ -87,8 +90,9 @@ fields:
       validate:
         - 'mimes:mp4,webp'
       if:
-        kind: 'equals video_file'
+        image_kind: 'equals video_file'
       replicator_preview: false
+      localizable: false
   -
     handle: fallback_video_file
     field:
@@ -110,8 +114,9 @@ fields:
       validate:
         - 'mimes:mp4,mov'
       if:
-        kind: 'equals video_file'
+        image_kind: 'equals video_file'
       replicator_preview: false
+      localizable: false
   -
     handle: image_url
     field:
@@ -124,7 +129,8 @@ fields:
       instructions_position: above
       visibility: visible
       if:
-        kind: 'equals url'
+        image_kind: 'equals url'
+      localizable: false
   -
     handle: image_width
     field:
@@ -138,10 +144,11 @@ fields:
       instructions_position: above
       visibility: visible
       if:
-        kind: 'equals random_url'
+        image_kind: 'equals random_url'
       validate:
         - integer
         - 'min:16'
+      localizable: false
   -
     handle: image_height
     field:
@@ -155,10 +162,11 @@ fields:
       instructions_position: above
       visibility: visible
       if:
-        kind: 'equals random_url'
+        image_kind: 'equals random_url'
       validate:
         - integer
         - 'min:16'
+      localizable: false
   -
     handle: caption
     field:
@@ -172,6 +180,7 @@ fields:
       always_save: false
       width: 50
       replicator_preview: false
+      localizable: false
   -
     handle: credits
     field:
@@ -186,3 +195,19 @@ fields:
       always_save: false
       width: 50
       replicator_preview: false
+      localizable: false
+  -
+    handle: image_alt
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Alt Text'
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      if:
+        image_kind: 'not image_file'

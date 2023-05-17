@@ -7,26 +7,32 @@ fields:
       always_show_set_button: false
       previews: true
       sets:
-        image:
-          display: Bild
-          fields:
-            -
-              import: image
-        video:
-          display: Video
-          fields:
-            -
-              import: video
-        image_overview:
-          display: Bilder-Übersicht
-          fields:
-            -
-              import: image_overview
-        text_image:
-          display: Text/Bild
-          fields:
-            -
-              import: text_image
+        main:
+          display: Hauptteil
+          instructions: null
+          icon: null
+          sets:
+            image:
+              display: Bild
+              instructions: null
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: image
+            video:
+              display: Video
+              instructions: null
+              icon: media-webcam-video
+              fields:
+                -
+                  import: video
+            text:
+              display: Text
+              instructions: null
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: text
       buttons:
         - h2
         - h3
@@ -59,3 +65,4 @@ fields:
       visibility: visible
       always_save: false
       localizable: true
+      hide_display: false
