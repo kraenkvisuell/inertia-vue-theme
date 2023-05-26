@@ -1,5 +1,5 @@
 <template>
-<div class="grid gap-[20px]">
+<div class="grid gap-[20px] max-w-screen-md mx-auto">
     <Headline 
         v-if="set.headline"
         :level="set.headline_level.value"
