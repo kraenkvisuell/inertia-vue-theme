@@ -20,6 +20,7 @@ export_paths:
   - resources/blueprints
   - resources/css
   - resources/fieldsets
+  - resources/forms
   - resources/js
   - resources/users/roles.yaml
   - resources/views
@@ -30,7 +31,7 @@ export_paths:
   - postcss.config.js
 dependencies:
   inertiajs/inertia-laravel: ^0.6.9
-  kraenkvisuell/statamic-helpers: ^1.0.2
+  kraenkvisuell/statamic-helpers: ^1.1.0
   laravel/horizon: ^5.10
   spatie/laravel-ray: ^1.31
   tightenco/ziggy: ^1.5

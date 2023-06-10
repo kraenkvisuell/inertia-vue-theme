@@ -14,6 +14,7 @@ class HandleInertiaRequests extends Middleware
         return array_merge(parent::share($request), [
             'nav' => Helper::allNavs(),
             'globals' => Helper::allGlobals(),
+            'forms' => Helper::allForms(),
             'locales' => $this->getLocales(),
             'activeLocale' => Site::current()->locale,
             'session' => [
