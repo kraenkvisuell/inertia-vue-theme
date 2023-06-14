@@ -5,21 +5,6 @@ tabs:
       -
         fields:
           -
-            handle: last_name
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Name
-              icon: text
-              width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-              validate:
-                - required
-          -
             handle: first_name
             field:
               input_type: text
@@ -28,7 +13,22 @@ tabs:
               display: Vorname
               icon: text
               width: 50
-              listable: hidden
+              listable: true
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: last_name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Nachname
+              icon: text
+              width: 50
+              listable: true
               instructions_position: above
               visibility: visible
               hide_display: false
@@ -42,7 +42,7 @@ tabs:
               type: text
               display: E-Mail
               icon: text
-              listable: hidden
+              listable: true
               instructions_position: above
               visibility: visible
               hide_display: false
@@ -52,11 +52,12 @@ tabs:
           -
             handle: message
             field:
+              placeholder: 'Deine Nachricht'
               antlers: false
               type: textarea
               display: Nachricht
               icon: textarea
-              listable: hidden
+              listable: true
               instructions_position: above
               visibility: visible
               hide_display: false
