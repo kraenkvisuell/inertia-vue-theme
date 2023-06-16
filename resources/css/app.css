@@ -12,10 +12,6 @@
     position: relative;
 }
 
-#app {
-    @apply h-full overflow-auto;
-}
-
 .iframe-container iframe {
     position: absolute;
     left: 0;

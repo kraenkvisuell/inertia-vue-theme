@@ -4,3 +4,8 @@ email:
     id: liq69b1i
     to: hilger@kraenk.de
     subject: 'Kontaktformular auf Website ausgefüllt'
+    html: notifications/contact-form/html
+    text: notifications/contact-form/text
+    attachments: true
+    markdown: true
+    reply_to: '{{ email }}'
