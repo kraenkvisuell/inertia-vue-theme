@@ -17,6 +17,7 @@ class HandleInertiaRequests extends Middleware
             'forms' => Helper::allForms(),
             'locales' => $this->getLocales(),
             'activeLocale' => Site::current()->locale,
+            'userIsLogged' => Auth::check(),
             'session' => [
                 'externalContentConfirmed' => session('external_content_confirmed'),
             ],

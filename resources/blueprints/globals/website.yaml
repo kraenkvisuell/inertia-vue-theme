@@ -1,4 +1,21 @@
 sections:
+  main:
+    display: Allgemein
+    sections:
+      -
+        fields:
+          -
+            handle: website_is_locked
+            field:
+              default: false
+              type: toggle
+              display: Baustellen-Modus
+              icon: toggle
+              instructions: 'Die gesamte Website ist nur erreichbar, wenn man der Besucher auch im CMS eingeloggt ist.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
   seo:
     display: SEO
     fields:

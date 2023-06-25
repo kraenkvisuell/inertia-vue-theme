@@ -5,19 +5,32 @@
         <Header class="z-30 fixed top-0 left-0 w-full" />
 
         <transition name="page" mode="out-in" appear>
-            
-            <main :key="$page.url" class="
-                w-full min-h-full z-10
-                px-[16px] sm:px-[26px] md:px-[38px]
-                pt-[120px] md:pt-[190px]
-                pb-[120px] md:pb-[190px]
-            ">
+            <main
+                v-if="okToVisit"
+                :key="$page.url"
+                class="
+                    w-full min-h-full z-10
+                    px-[16px] sm:px-[26px] md:px-[38px]
+                    pt-[120px] md:pt-[190px]
+                    pb-[120px] md:pb-[190px]
+                "
+            >
                 <slot />
-            
+            </main>
+
+            <main
+                v-else
+                class="w-full min-h-full px-[30px] py-[30px]"
+            >
+                An dieser Website wird zur Zeit gearbeitet.<br />
+                Bitte schauen Sie später wieder vorbei.
             </main>
         </transition>
 
-        <Footer class="z-20 absolute bottom-0 left-0 w-full" />
+        <Footer 
+            v-if="okToVisit"
+            class="z-20 absolute bottom-0 left-0 w-full" 
+        />
     </div>
 </template>
 
@@ -31,6 +44,12 @@ export default {
         Footer,
         Head, 
         Header, 
+    },
+    computed: {
+        okToVisit() {
+            return !this.$page.props.globals.website.website_is_locked
+                || this.$page.props.userIsLogged
+        }
     },
     mounted() {
         
